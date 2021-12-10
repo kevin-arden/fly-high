@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+.main-menu {
+  margin-top: 50px;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-10 {
+  margin-top: 20px;
+}
+
+.select-menu-label {
+  font-size: 14px;
+  color: #6b6b6b;
+}
+
+.main-text {
+  font-size: 54px;
+  font-weight: 500;
+  color: #414141;
+  margin-top: 30px;
+}
+
+.blue-text {
+  color: #2395ff;
+}
+
+.secondary-text {
+  font-size: 18px;
+  color: #979797;
+}
+
+.bg-image {
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.left-bg {
+  left: -100px;
+  top: 410px;
+}
+
+.right-bg {
+  right: 00px;
+  border-radius: 10px;
+}
+
+.col {
+  float: left;
+  width: 50%;
+}
+
+.flight-search-menu {
+  width: 60%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  -webkit-box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.49);
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.49);
+}
+
+.bigger-text {
+  font-size: 20px;
+}
+
+.menu-button {
+  background-color: #fff;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+}
+
+.destinations {
+  -webkit-box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.1);
+  padding: 13px;
+  border-radius: 10px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.small-text {
+  font-family: Lato;
+  font-size: 12px;
+  color: #979797;
+}
+
+.second {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.black-text {
+  color: #000;
+}
+
+.button-options {
+  margin-top: 23px;
+}
+
+.button {
+  border: none;
+  border-radius: 6px;
+  padding: 11px 22px;
+  font-weight: 600;
+  font-size: 16;
+  text-align: center;
+}
+
+.main-btn {
+  background-color: #2395ff;
+  color: #fff;
+}
+
+.secondary-btn {
+  background-color: #f0f0f0;
+  color: #595959;
+}
+
+.popup-button {
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 23px;
+  border: 1px solid #dddddd;
+}
+
+.full {
+  width: 100%;
+}
+
+.half {
+  width: 48%;
+}
+
+.button-label {
+  font-size: 14px;
+  font-weight: 500;
+}
