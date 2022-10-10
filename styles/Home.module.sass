@@ -1,3 +1,8 @@
+$main-color: #2395FF
+
+.container p
+  margin: 0
+
 .section_1
   position: absolute
   right: 0
@@ -7,19 +12,18 @@
   left: 0
   top: 400px
 
-.hero_container
-  // position: relative
-  // left: 130px
-  // top: 30px
-  // width: 500px
-
 .hero_text
   font-size: 54px
   margin-bottom: 0px
+
 .hero_secondary
   color: grey
+
+.hero_container
+  margin-top: 90px
+
 .blue
-  color: #2395FF
+  color: $main-color
 
 .main_container
   display: flex
@@ -29,22 +33,21 @@
   margin-right: 240px
 
 .link
+  display: flex
+  justify-content: space-between
   &:hover
     cursor: pointer
 
 .ticket_card
   z-index: 10
   background: #fff
-  padding-top: 30px
-  padding-bottom: 30px
-  padding-left: 40px
-  padding-right: 40px
+  padding: 30px 40px
   border-radius: 12px
   margin-top: 45px
   box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.1)
   // position: relative
   // top: 30px
-  
+
 .destination
   display: flex
   flex-direction: row
@@ -82,16 +85,40 @@
   padding-top: 12px
   padding-bottom: 11px
   border-radius: 10px
+  width: 100%
+  display: flex
+  justify-content: start
   &:hover
     cursor: pointer
 
 .button_main
-  background: #2395FF
-  
+  background: $main-color
+
 .button_secondary
   background: #F0F0F0
   color: #595959
-  
+
 .button_container
   display: flex
   justify-content: space-between
+  margin-bottom: 20px
+
+.picker_button
+  border: solid 1px
+  border-radius: 12px
+  padding-top: 16px
+  padding-bottom: 16px
+  padding-left: 20px
+  padding-right: 20px
+  cursor: pointer
+  border-color: #DDDDDD
+  display: flex
+  justify-content: space-between
+  width: 100%
+
+.space
+  display: inline-block
+  width: 24px
+
+.sec_container
+  margin: 130px

@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import style from "../styles/Home.module.sass";
+import Button from "../components/Button";
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
       <div className={style.section_2}>
         <Image src="/main-left.png" width={800} height={500} alt="none" />
       </div>
+      
       <div className={style.main_container}>
         <div className={style.hero_container}>
           <p className={style.hero_text}>
@@ -21,14 +23,17 @@ const Home: NextPage = () => {
         </div>
         <div className={style.ticket_card}>
           <div>
-            Hey, <br /> Where you want to go?
+            Hey, <br />
+            <br /> Where you want to go?
           </div>
+          <br />
           <Link href={"/tickets"}>
-            <p className={`${style.blue} ${style.link}`}>
-              Recently Searched{" "}
+            <div className={`${style.blue} ${style.link}`}>
+              <p>Recently Searched</p>
               <Image src="/btnback.svg" width={10} height={10} alt="none" />
-            </p>
+            </div>
           </Link>
+          <br />
           <div className={style.destination}>
             <div>
               <p className={style.destination_top}>From</p>
@@ -50,34 +55,40 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className={style.button_container}>
-            <button className={`${style.button} ${style.button_main}`}>
-              One way
-            </button>
-            <button className={`${style.button} ${style.button_secondary}`}>
-              Round Trip
-            </button>
+            <Button classNames="primary">Search flight</Button>
+            <div className={style.space} />
+            <Button classNames="secondary">Round Trip</Button>
           </div>
           <div>
-            <p>Destination</p>
-            <div>
+            <p>Departure</p>
+            <br />
+            <div
+              onClick={() => console.log("test")}
+              className={style.picker_button}
+            >
               Monday, 10 August 2020{" "}
               <Image src="/btnback.svg" width={10} height={10} alt="none" />
             </div>
           </div>
+          <br />
           <div>
             <p>How many person?</p>
-            <div>
-              2 Adults{" "}
-              <Image src="/btnback.svg" width={10} height={10} alt="none" />
-            </div>
-            <div>
-              1 Children{" "}
-              <Image src="/btnback.svg" width={10} height={10} alt="none" />
+            <br />
+            <div className={style.button_container}>
+              <div className={style.picker_button}>
+                <p>2 Adults</p>
+                <Image src="/btnback.svg" width={10} height={10} alt="none" />
+              </div>
+              <div className={style.space} />
+              <div className={style.picker_button}>
+                <p>1 Children</p>
+                <Image src="/btnback.svg" width={10} height={10} alt="none" />
+              </div>
             </div>
           </div>
           <div>
-            Which class do you want?
-            <br/>
+            <p>Which class do you want?</p>
+            <br />
             <input type="radio" id="economy" />
             <label htmlFor="economy">Economy</label>
             <input type="radio" id="business" />
@@ -86,10 +97,17 @@ const Home: NextPage = () => {
             <label htmlFor="firstClass">First Class</label>
             <br />
           </div>
+          <br />
           <div>
-            <button>Search flight</button>
+            <Button classNames="primary">Search flight</Button>
           </div>
         </div>
+      </div>
+
+      <div className={style.sec_container}>
+        Trending
+        <br />
+        Trending destinations
       </div>
     </div>
   );
