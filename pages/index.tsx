@@ -3,8 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import style from "../styles/Home.module.sass";
 import Button from "../components/Button";
+import { Card } from "../components/Card";
 
 const Home: NextPage = () => {
+  let cardList = [
+    { city: "Tokyo", country: "Japan" },
+    { city: "Barcelona", country: "Spain" },
+    { city: "Paris", country: "France" },
+    { city: "Bali", country: "Indonesia" },
+    { city: "London", country: "England" },
+  ];
   return (
     <div className={style.container}>
       <div className={style.section_1}>
@@ -13,7 +21,7 @@ const Home: NextPage = () => {
       <div className={style.section_2}>
         <Image src="/main-left.png" width={800} height={500} alt="none" />
       </div>
-      
+
       <div className={style.main_container}>
         <div className={style.hero_container}>
           <p className={style.hero_text}>
@@ -105,9 +113,17 @@ const Home: NextPage = () => {
       </div>
 
       <div className={style.sec_container}>
-        Trending
+        <div>
+          <p className={style.blue}>TRENDING</p>
+          <br />
+          Trending destinations
+        </div>
         <br />
-        Trending destinations
+        <div className={style.carousel_container}>
+          {cardList.map((item, index) => (
+            <Card city={item.city} country={item.country} key={index} />
+          ))}
+        </div>
       </div>
     </div>
   );

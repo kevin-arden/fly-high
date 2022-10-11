@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <div className={style.container}>
-        <div className={style.column}>
+        <div className={`${style.column} ${style.column_1}`}>
           <Link href="/">
             <div>
               <Image src="/main-logo.svg" height={35} width={50} alt="none" />{" "}
@@ -20,7 +20,6 @@ const Footer = () => {
             the rest
           </p>
         </div>
-        <div className={style.space} />
         <div className={style.column}>
           <div>Features</div>
           <br />
@@ -39,7 +38,6 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className={style.space} />
         <div className={style.column}>
           <div>Download Fly High App</div>
           <br />
@@ -66,7 +64,6 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className={style.space} />
         <div className={style.column}>
           <div>Follow Us</div>
           <br />
@@ -95,7 +92,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={style.row}>
-        <div>© Ankasa. All Rights Reserved.</div>
+        <div>© Fly High. All Rights Reserved.</div>
         <div>
           <Image src="/map-pin.svg" width={15} height={15} alt="none"/>
            Jakarta Indonesia</div>
