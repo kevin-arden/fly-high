@@ -1,31 +1,35 @@
 import React from "react";
-import destinationStyle from "../../styles/Home.module.sass"
-import style from "../../styles/Booking.module.sass"
-import Image from "next/image";
+import style from "../../styles/Booking.module.sass";
+import { BookingHeader } from "../../components/BookingHeader";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSort } from "@fortawesome/free-solid-svg-icons";
+
 
 const Booking = () => {
   return (
     <>
-    <div className={style.container}>
-      <div className={destinationStyle.destination}>
-        <div>
-          <p className={destinationStyle.destination_top}>From</p>
-          <p className={destinationStyle.destination_mid}>Medan</p>
-          <p className={destinationStyle.destination_bot}>Indonesia</p>
+      <BookingHeader />
+      <div className={style.header_main}>
+        <div className={style.filter}>
+          <h3>Filter</h3>
+          <button>Reset</button>
         </div>
-        <div className={destinationStyle.back_and_forth}>
-          <Image src="/back_and_forth.svg" width={17} height={17} alt="none" />
-        </div>
-        <div>
-          <p className={destinationStyle.destination_top}>To</p>
-          <p className={destinationStyle.destination_mid}>Tokyo</p>
-          <p className={destinationStyle.destination_bot}>Japan</p>
+        <div className={style.sort}>
+          <div className={style.left}>
+            <h3>Select Ticket</h3>
+            <p>(6 flight found)</p>
+          </div>
+          <button>
+            Sort by <FontAwesomeIcon icon={faSort} />
+          </button>
         </div>
       </div>
-    </div>
-    <div>
-      =
-    </div>
+      <div className={style.content}>
+        <div className={style.left}>
+          
+        </div>
+        <div className={style.right}></div>
+      </div>
     </>
   );
 };

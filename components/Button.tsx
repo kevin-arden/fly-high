@@ -1,13 +1,33 @@
+import Image from "next/image";
 import React from "react";
-import style from "../styles/Home.module.sass";
+import styleButton from "../styles/Button.module.sass";
 
-const Button = ({ children, classNames }: { children: string; classNames: string }) => {
+const Button = ({
+  children,
+  classNames,
+  logo,
+}: {
+  children: string;
+  classNames: string;
+  logo: string;
+}) => {
   return (
     <button
-      className={`${style.button} 
-    ${classNames === "primary" ? style.button_main : style.button_secondary}`}
+      className={`${styleButton.button} 
+    ${
+      classNames === "primary"
+        ? styleButton.button_main
+        : styleButton.button_secondary
+    }`}
     >
-      {children}
+      <div>
+        {logo ? (
+          <Image src={`/${logo}`} width={15} height={15} alt="none" />
+        ) : (
+          <></>
+        )}
+        <>{children}</>
+      </div>
     </button>
   );
 };

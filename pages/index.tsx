@@ -4,7 +4,7 @@ import Link from "next/link";
 import style from "../styles/Home.module.sass";
 import Button from "../components/Button";
 import { Card } from "../components/Card";
-
+import styleButton from "../styles/Button.module.sass"
 const Home: NextPage = () => {
   let cardList = [
     { city: "Tokyo", country: "Japan" },
@@ -62,10 +62,14 @@ const Home: NextPage = () => {
               <p className={style.destination_bot}>Japan</p>
             </div>
           </div>
-          <div className={style.button_container}>
-            <Button classNames="primary">Search flight</Button>
+          <div className={styleButton.button_container}>
+            <Button logo="white-plane.svg" classNames="primary">
+              Search flight
+            </Button>
             <div className={style.space} />
-            <Button classNames="secondary">Round Trip</Button>
+            <Button logo="refresh.svg" classNames="secondary">
+              Round Trip
+            </Button>
           </div>
           <div>
             <p>Departure</p>
@@ -82,7 +86,7 @@ const Home: NextPage = () => {
           <div>
             <p>How many person?</p>
             <br />
-            <div className={style.button_container}>
+            <div className={styleButton.button_container}>
               <div className={style.picker_button}>
                 <p>2 Adults</p>
                 <Image src="/btnback.svg" width={10} height={10} alt="none" />
@@ -107,7 +111,9 @@ const Home: NextPage = () => {
           </div>
           <br />
           <div>
-            <Button classNames="primary">Search flight</Button>
+            <Button logo="" classNames="primary">
+              Search flight
+            </Button>
           </div>
         </div>
       </div>
